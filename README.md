@@ -1,17 +1,17 @@
-# 🎵 YouTube 歌單 MP3 下載器  
-## YouTube Playlist MP3 Downloader
+# 🎵 YouTube 歌單 .webm 下載器  
+## YouTube Playlist .webm Downloader
 
-一個開源的 YouTube 歌單下載工具，可將整個歌單快速轉為 MP3，支援局域網 QR Code 分享。你可以使用已編譯好的 `.exe` 執行檔，或直接執行 Python 原始碼。
+一個開源的 YouTube 歌單下載工具，可將整個歌單快速轉為 .webm，支援局域網 QR Code 分享。你可以使用已編譯好的 `.exe` 執行檔，或直接執行 Python 原始碼。
 
-An open-source YouTube playlist downloader that converts entire playlists into MP3 files. Supports LAN QR code sharing. Run with the precompiled `.exe`, or launch via Python source.
+An open-source YouTube playlist downloader that converts entire playlists into .webm files. Supports LAN QR code sharing. Run with the precompiled `.exe`, or launch via Python source.
 
 ---
 
 ## 🌟 功能 Features
 
-- ✅ 一鍵下載整個 YouTube 歌單成 MP3  
+- ✅ 一鍵下載整個 YouTube 歌單成 M.webm 
   One-click download of full YouTube playlists as MP3  
-- ✅ 自動命名與 MP3 標籤整理  
+- ✅ 自動命名與 .webm 標籤整理  
   Auto naming and tagging of downloaded MP3s  
 - ✅ QR Code 分享，可手機直接下載  
   QR code for easy mobile downloads over LAN  
