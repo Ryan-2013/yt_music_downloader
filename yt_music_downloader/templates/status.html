@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<title>下載狀態</title>
+</head>
+<body>
+    <h1>下載狀態</h1>
+    <p id="status">取得狀態中...</p>
+
+    <div id="download-links"></div>
+
+    <div id="qr-code"></div>
+    <h1></h1>
+    <script>
+        const taskId = "{{ task_id }}";
+
+        function checkStatus() {
+            fetch('/status/' + taskId)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('status').innerText = data.status;
+
+                    if (data.status === '下載完成') {
+                        if (data.files && data.files.length > 0) {
+                            let linksHtml = '<h3>下載完成，點擊以下連結下載音樂檔案：</h3><ul>';
+                            data.files.forEach(file => {
+                                linksHtml += `<li><a href="${file.url}" target="_blank">${file.name}</a></li>`;
+                            });
+                            linksHtml += '</ul>';
+                            document.getElementById('download-links').innerHTML = linksHtml;
+                        }
+
+                        if (data.qr_code) {
+                            document.getElementById('qr-code').innerHTML =
+                                '<h3>局域網下載 QR Code</h3>' +
+                                `<img src="data:image/png;base64,${data.qr_code}" alt="QR Code" style="width:180px;height:180px;">` +
+                                `<p>局域網下載連結：<a href="${data.lan_url}" target="_blank">${data.lan_url}</a></p>`;
+                        }
+
+                        clearInterval(timer);
+                    } else if (data.status.startsWith('下載失敗')) {
+                        clearInterval(timer);
+                    }
+                });
+        }
+
+        // 每 3 秒更新一次狀態
+        const timer = setInterval(checkStatus, 3000);
+        checkStatus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<title>輸入歌單網址下載 MP3</title>
+</head>
+<body>
+    <h1>請輸入 YouTube 歌單網址</h1>
+    {% if error %}
+    <p style="color:red">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+        <input type="text" name="url" placeholder="貼上歌單網址" style="width: 400px;" required />
+        <button type="submit">開始下載</button>
+    </form>
+</body>
+</html>
