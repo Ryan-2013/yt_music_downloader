@@ -42,8 +42,8 @@ You can run `yt_music_downloader.exe` directly. No Python or setup required.
 pip install flask yt-dlp qrcode
 
 
-
-2️⃣ 安裝 ffmpeg
+```
+### 2️⃣ 安裝 ffmpeg
 這是音訊轉檔工具，yt-dlp 會用它來產出 mp3。
 
 Windows：
