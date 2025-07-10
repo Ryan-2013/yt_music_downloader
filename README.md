@@ -2,9 +2,11 @@
 YouTube Playlist .webm Downloader
 一個開源的 YouTube 歌單下載工具，可將整個歌單快速轉為 .webm 格式，支援局域網 QR Code 分享。你可以使用已編譯好的 .exe 執行檔，或執行 Python 原始碼。
 (exe以沒有提供)
+請自行安裝python 3.10系列,並依照下方只是進行依賴安裝,如有不變敬請見諒。
 
 An open-source YouTube playlist downloader that converts full playlists into .webm files. Supports LAN QR code sharing. Run with the precompiled .exe, or launch from Python source.
 (exe is not provided)
+Please install Python 3.10 series by yourself and follow the instructions below to install the dependencies. Please forgive me if there are any changes.
 
 🌟 功能 Features
 ✅ 一鍵下載整個 YouTube 歌單為 .webm
